@@ -2,7 +2,7 @@ FROM archlinux:base-devel
 
 ARG USERNAME="archlinux"
 
-RUN pacman -Syyu --noconfirm git vim fish \
+RUN pacman -Syyu --noconfirm git vim fish starship \
   && useradd -m -g users -g wheel ${USERNAME} \
   && echo "ALL ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} \
   && chsh --shell /bin/fish ${USERNAME}
@@ -15,8 +15,10 @@ RUN git clone https://aur.archlinux.org/paru-bin.git /tmp/paru \
   && makepkg -si --noconfirm \
   && rm -rf /tmp/paru
 
-# No greeting
-RUN mkdir -p ~/.config/fish \
-  && echo "set fish_greeting" >> ~/.config/fish/config.fish
+# Configure Fish and Starship
+RUN mkdir -p ~/.config/fish/conf.d \
+  && echo "set fish_greeting" >> ~/.config/fish/config.fish \
+  && echo "starship init fish | source" >> ~/.config/fish/conf.d/starship.fish \
+  && starship preset plain-text-symbols > ~/.config/starship.toml
 
 CMD [ "fish" ]
