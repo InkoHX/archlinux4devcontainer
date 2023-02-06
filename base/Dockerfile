@@ -19,6 +19,6 @@ RUN git clone https://aur.archlinux.org/paru-bin.git /tmp/paru \
 RUN mkdir -p ~/.config/fish/conf.d \
   && echo "set fish_greeting" >> ~/.config/fish/config.fish \
   && echo "starship init fish | source" >> ~/.config/fish/conf.d/starship.fish \
-  && starship preset plain-text-symbols > ~/.config/starship.toml
+  && starship preset no-nerd-font > ~/.config/starship.toml
 
 CMD [ "fish" ]
