@@ -20,6 +20,6 @@ RUN mkdir -p ~/.config/fish/conf.d \
   && echo "set fish_greeting" >> ~/.config/fish/config.fish \
   && echo "starship init fish | source" >> ~/.config/fish/conf.d/starship.fish \
   && starship preset no-nerd-font > ~/.config/starship.toml \
-  && echo "container.disabled = true" >> ~/.config/starship.toml
+  && printf "\n[container]\ndisabled = true" >> ~/.config/starship.toml
 
 CMD [ "fish" ]
