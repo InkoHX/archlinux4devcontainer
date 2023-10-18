@@ -59,7 +59,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [20, 18, 16]
+        node: [20, 18]
 
     steps:
       - name: Checkout repository
