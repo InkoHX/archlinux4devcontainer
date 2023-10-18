@@ -18,6 +18,7 @@ permissions:
 
 jobs:
   base:
+    name: Base
     runs-on: ubuntu-latest
 
     steps:
@@ -48,6 +49,7 @@ jobs:
           labels: ${{ steps.metadata.outputs.labels }}
 
   node:
+    name: Node.js ${{ matrix.node }}
     needs: base
     runs-on: ubuntu-latest
 
@@ -85,6 +87,7 @@ jobs:
             NODE_VERSION=${{ matrix.node }}
 
   deno:
+    name: Deno
     needs: base
     runs-on: ubuntu-latest
 
@@ -116,6 +119,7 @@ jobs:
           labels: ${{ steps.metadata.outputs.labels }}
 
   bun:
+    name: Bun
     needs: base
     runs-on: ubuntu-latest
 
