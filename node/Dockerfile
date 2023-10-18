@@ -6,4 +6,4 @@ RUN paru -S --noconfirm volta-bin \
   && fish -c "volta setup" \
   && volta completions fish --output ~/.config/fish/conf.d/volta-completions.fish  \
   && volta install node@${NODE_VERSION} pnpm yarn \
-  && pnpm install-completion fish
+  && fish -c "pnpm install-completion fish"
