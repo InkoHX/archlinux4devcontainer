@@ -1,6 +1,6 @@
 FROM ghcr.io/inkohx/archlinux:base
 
-ARG NODE_VERSION=18
+ARG NODE_VERSION=20
 
 RUN paru -S --noconfirm volta-bin \
   && fish -c "volta setup" \
