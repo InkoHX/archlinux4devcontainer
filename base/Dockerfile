@@ -22,4 +22,10 @@ RUN mkdir -p ~/.config/fish/conf.d \
   && starship preset no-nerd-font > ~/.config/starship.toml \
   && printf "\n[container]\ndisabled = true" >> ~/.config/starship.toml
 
+# https://moonrepo.dev/docs/proto
+ENV PROTO_AUTO_INSTALL=true
+RUN PROTO_INSTALL_DIR=$HOME/.proto/bin curl -fsSL https://moonrepo.dev/install/proto.sh | bash \
+  && $HOME/.proto/bin/proto setup --shell fish \
+  && fish -c "proto completions --shell fish > ~/.config/fish/conf.d/proto-completions.fish"
+
 CMD [ "fish" ]

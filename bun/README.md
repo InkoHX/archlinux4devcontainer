@@ -3,4 +3,5 @@
 ## Include packages
 
 - [`ghcr.io/inkohx/archlinux:base`](../base/README.md)
-- [`bun-bin`](https://aur.archlinux.org/packages/bun-bin)
+- [Bun](https://bun.sh)
+  - using [proto](https://moonrepo.dev/docs/proto)

@@ -1,3 +1,3 @@
 FROM ghcr.io/inkohx/archlinux:base
 
-RUN paru --noconfirm -S bun-bin
+RUN fish -c "proto install bun --pin"

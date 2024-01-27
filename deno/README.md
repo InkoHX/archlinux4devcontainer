@@ -3,4 +3,5 @@
 ## Include packages
 
 - [`ghcr.io/inkohx/archlinux:base`](../base/README.md)
-- [deno](https://archlinux.org/packages/community/x86_64/deno)
+- [Deno](https://deno.land)
+  - using [proto](https://moonrepo.dev/docs/proto)
