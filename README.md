@@ -12,6 +12,7 @@
 
 | Version   | Image                              | Supported |
 | --------- | ---------------------------------- | --------- |
+| **v21.x** | `ghcr.io/inkohx/archlinux:node-21` | ✅        |
 | **v20.x** | `ghcr.io/inkohx/archlinux:node-20` | ✅        |
 | **v18.x** | `ghcr.io/inkohx/archlinux:node-18` | ✅        |
 | **v16.x** | `ghcr.io/inkohx/archlinux:node-16` | ❌        |
