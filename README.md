@@ -29,3 +29,9 @@
 | Version    | Image                          | Supported |
 | ---------- | ------------------------------ | --------- |
 | **Latest** | `ghcr.io/inkohx/archlinux:bun` | ✅        |
+
+### Rust
+
+| Version    | Image                           | Supported |
+| ---------- | ------------------------------- | --------- |
+| **Latest** | `ghcr.io/inkohx/archlinux:rust` | ✅        |
