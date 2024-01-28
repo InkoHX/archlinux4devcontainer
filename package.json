@@ -6,6 +6,7 @@
     "zx": "^7.2.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
     "bun-types": "^1.0.25"
   },
   "peerDependencies": {
