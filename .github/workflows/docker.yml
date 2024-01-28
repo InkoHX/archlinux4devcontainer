@@ -58,7 +58,7 @@ jobs:
           bun-version: 1.0.25
 
       - name: Test
-        run: bun --install ./base/test.ts
+        run: bun ./base/test.ts
         env:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
@@ -111,7 +111,7 @@ jobs:
           bun-version: 1.0.25
 
       - name: Test
-        run: bun --install ./node/test.ts
+        run: bun ./node/test.ts
         env:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
@@ -162,7 +162,7 @@ jobs:
           bun-version: 1.0.25
 
       - name: Test
-        run: bun --install ./deno/test.ts
+        run: bun ./deno/test.ts
         env:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
@@ -211,7 +211,7 @@ jobs:
           bun-version: 1.0.25
 
       - name: Test
-        run: bun --install ./bun/test.ts
+        run: bun ./bun/test.ts
         env:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
@@ -260,7 +260,7 @@ jobs:
           bun-version: 1.0.25
 
       - name: Test
-        run: bun --install ./rust/test.ts
+        run: bun ./rust/test.ts
         env:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
