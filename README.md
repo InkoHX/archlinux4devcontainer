@@ -1,4 +1,4 @@
-# ArchLinux container image for Development Container
+# ArchLinux image for Development Container
 
 [![Docker](https://github.com/InkoHX/archlinux4devcontainer/actions/workflows/docker.yml/badge.svg?event=push)](https://github.com/InkoHX/archlinux4devcontainer/actions/workflows/docker.yml)
 
