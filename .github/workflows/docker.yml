@@ -57,6 +57,9 @@ jobs:
         with:
           bun-version: 1.0.25
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Test
         run: bun ./base/test.ts
         env:
@@ -110,6 +113,9 @@ jobs:
         with:
           bun-version: 1.0.25
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Test
         run: bun ./node/test.ts
         env:
@@ -161,6 +167,9 @@ jobs:
         with:
           bun-version: 1.0.25
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Test
         run: bun ./deno/test.ts
         env:
@@ -210,6 +219,9 @@ jobs:
         with:
           bun-version: 1.0.25
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Test
         run: bun ./bun/test.ts
         env:
@@ -258,6 +270,9 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: 1.0.25
+
+      - name: Install dependencies
+        run: bun install
 
       - name: Test
         run: bun ./rust/test.ts
