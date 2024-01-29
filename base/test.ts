@@ -10,7 +10,7 @@ await container.exec("which", "vim");
 await container.exec("which", "paru");
 await container.exec("which", "fish");
 
-const execWithFish = (...args: string[]) =>
-	container.exec("fish", "-c", ...args);
+const execWithFish = (command: string) =>
+	container.exec("fish", "-c", command);
 
 await execWithFish("which proto");
