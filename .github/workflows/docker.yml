@@ -109,9 +109,9 @@ jobs:
           load: true
           tags: ${{ env.TEST_IMAGE_NAME }}
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: moonrepo/setup-toolchain@v0
         with:
-          bun-version: 1.0.25
+          auto-install: true
 
       - name: Install dependencies
         run: bun install
@@ -163,9 +163,9 @@ jobs:
           load: true
           tags: ${{ env.TEST_IMAGE_NAME }}
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: moonrepo/setup-toolchain@v0
         with:
-          bun-version: 1.0.25
+          auto-install: true
 
       - name: Install dependencies
         run: bun install
@@ -215,9 +215,9 @@ jobs:
           load: true
           tags: ${{ env.TEST_IMAGE_NAME }}
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: moonrepo/setup-toolchain@v0
         with:
-          bun-version: 1.0.25
+          auto-install: true
 
       - name: Install dependencies
         run: bun install
@@ -267,9 +267,9 @@ jobs:
           load: true
           tags: ${{ env.TEST_IMAGE_NAME }}
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: moonrepo/setup-toolchain@v0
         with:
-          bun-version: 1.0.25
+          auto-install: true
 
       - name: Install dependencies
         run: bun install
