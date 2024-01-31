@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
+      - uses: moonrepo/setup-toolchain@v0
+        with:
+          auto-install: true
 
-      - run: biome ci .
+      - run: bun run biome ci .
