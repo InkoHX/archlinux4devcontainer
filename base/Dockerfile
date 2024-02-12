@@ -24,8 +24,7 @@ RUN mkdir -p ~/.config/fish/conf.d \
 
 # https://moonrepo.dev/docs/proto
 ENV PROTO_AUTO_INSTALL=true
-RUN PROTO_INSTALL_DIR=$HOME/.proto/bin curl -fsSL https://moonrepo.dev/install/proto.sh | bash \
-  && $HOME/.proto/bin/proto setup --shell fish \
+RUN PROTO_INSTALL_DIR=$HOME/.proto/bin curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --yes --shell fish \
   && fish -c "proto completions --shell fish > ~/.config/fish/conf.d/proto-completions.fish"
 
 CMD [ "fish" ]
