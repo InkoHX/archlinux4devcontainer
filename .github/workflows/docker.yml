@@ -80,7 +80,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [21, 20, 18]
+        node: [22, 21, 20, 18]
 
     steps:
       - name: Checkout repository
