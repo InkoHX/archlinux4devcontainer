@@ -1,19 +1,20 @@
 {
-	"name": "@inkohx/archlinux4container",
-	"type": "module",
-	"scripts": {
-		"postinstall": "lefthook install"
-	},
-	"dependencies": {
-		"arktype": "^1.0.29-alpha",
-		"zx": "^7.2.3"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.5.3",
-		"bun-types": "^1.0.25",
-		"lefthook": "^1.6.1"
-	},
-	"peerDependencies": {
-		"typescript": "^5.3.3"
-	}
+  "name": "@inkohx/archlinux4container",
+  "type": "module",
+  "scripts": {
+    "postinstall": "lefthook install"
+  },
+  "dependencies": {
+    "arktype": "^1.0.29-alpha",
+    "zx": "^8.0.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.1",
+    "bun-types": "^1.1.6",
+    "lefthook": "^1.6.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
 }
