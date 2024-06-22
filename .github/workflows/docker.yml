@@ -47,7 +47,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./base
           load: true
@@ -66,7 +66,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./base
           push: ${{ github.event_name != 'pull_request' }}
@@ -103,7 +103,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./node
           load: true
@@ -124,7 +124,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./node
           push: ${{ github.event_name != 'pull_request' }}
@@ -159,7 +159,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./deno
           load: true
@@ -178,7 +178,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./deno
           push: ${{ github.event_name != 'pull_request' }}
@@ -211,7 +211,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./bun
           load: true
@@ -230,7 +230,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./bun
           push: ${{ github.event_name != 'pull_request' }}
@@ -263,7 +263,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./rust
           load: true
@@ -282,7 +282,7 @@ jobs:
           DOCKER_IMAGE: ${{ env.TEST_IMAGE_NAME }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./rust
           push: ${{ github.event_name != 'pull_request' }}
