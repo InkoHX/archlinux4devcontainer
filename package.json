@@ -5,7 +5,7 @@
     "postinstall": "lefthook install"
   },
   "dependencies": {
-    "arktype": "^1.0.29-alpha",
+    "arktype": "^2.0.0-rc.13",
     "zx": "^8.1.8"
   },
   "devDependencies": {
