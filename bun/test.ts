@@ -5,7 +5,7 @@ await using container = await createContainer(env.DOCKER_IMAGE);
 const execWithFish = (command: string) => container.exec("fish", "-c", command);
 
 // Show versions
-await execWithFish("proto list bun");
+await execWithFish("proto versions bun");
 
 // Show paths
 await execWithFish("proto bin bun");
