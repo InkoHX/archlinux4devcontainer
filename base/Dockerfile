@@ -1,8 +1,8 @@
-FROM archlinux:base-devel
+FROM archlinux:latest
 
 ARG USERNAME="archlinux"
 
-RUN pacman -Syyu --noconfirm git vim fish starship \
+RUN pacman -Syyu --noconfirm base-devel git vim fish starship \
   && useradd -m -g users -g wheel ${USERNAME} \
   && echo "ALL ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} \
   && chsh --shell /bin/fish ${USERNAME}
@@ -24,9 +24,8 @@ RUN mkdir -p ~/.config/fish/conf.d \
 
 # https://moonrepo.dev/docs/proto
 RUN paru -S --noconfirm proto-bin \
-  && echo 'export PROTO_HOME="\$HOME/.proto"' > ~/.config/fish/conf.d/proto.fish \
-  && echo 'export PATH="\$PROTO_HOME/bin:\$PATH"' >> ~/.config/fish/conf.d/proto.fish \
-  && echo 'export PATH="\$PROTO_HOME/shims:\$PATH"' >> ~/.config/fish/conf.d/proto.fish \
+  && echo 'export PROTO_HOME="$HOME/.proto"' > ~/.config/fish/conf.d/proto.fish \
+  && echo 'export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"' >> ~/.config/fish/conf.d/proto.fish \
   && echo 'export PROTO_AUTO_INSTALL="true"' >> ~/.config/fish/conf.d/proto.fish
 
 CMD [ "fish" ]
