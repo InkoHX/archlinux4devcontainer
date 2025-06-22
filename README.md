@@ -12,10 +12,12 @@
 
 | Version   | Image                              | Supported |
 | --------- | ---------------------------------- | --------- |
+| **v24.x** | `ghcr.io/inkohx/archlinux:node-24` | ✅        |
+| **v23.x** | -                                  | ❌        |
 | **v22.x** | `ghcr.io/inkohx/archlinux:node-22` | ✅        |
-| **v21.x** | `ghcr.io/inkohx/archlinux:node-21` | ✅        |
+| **v21.x** | `ghcr.io/inkohx/archlinux:node-21` | ❌        |
 | **v20.x** | `ghcr.io/inkohx/archlinux:node-20` | ✅        |
-| **v18.x** | `ghcr.io/inkohx/archlinux:node-18` | ✅        |
+| **v18.x** | `ghcr.io/inkohx/archlinux:node-18` | ❌        |
 | **v16.x** | `ghcr.io/inkohx/archlinux:node-16` | ❌        |
 | **v14.x** | `ghcr.io/inkohx/archlinux:node-14` | ❌        |
 

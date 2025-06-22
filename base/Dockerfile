@@ -23,8 +23,10 @@ RUN mkdir -p ~/.config/fish/conf.d \
   && printf "\n[container]\ndisabled = true" >> ~/.config/starship.toml
 
 # https://moonrepo.dev/docs/proto
-ENV PROTO_AUTO_INSTALL=true
-RUN PROTO_INSTALL_DIR=$HOME/.proto/bin curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --yes --shell=fish \
-  && fish -c "proto completions --shell fish > ~/.config/fish/conf.d/proto-completions.fish"
+RUN paru -S --noconfirm proto-bin \
+  && echo 'export PROTO_HOME="\$HOME/.proto"' > ~/.config/fish/conf.d/proto.fish \
+  && echo 'export PATH="\$PROTO_HOME/bin:\$PATH"' >> ~/.config/fish/conf.d/proto.fish \
+  && echo 'export PATH="\$PROTO_HOME/shims:\$PATH"' >> ~/.config/fish/conf.d/proto.fish \
+  && echo 'export PROTO_AUTO_INSTALL="true"' >> ~/.config/fish/conf.d/proto.fish
 
 CMD [ "fish" ]
