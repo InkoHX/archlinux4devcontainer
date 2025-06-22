@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 ARG USERNAME="archlinux"
 
-RUN pacman -Syyu --noconfirm base-devel git vim fish starship \
+RUN pacman -Syyu --noconfirm base-devel git fish starship \
   && useradd -m -g users -g wheel ${USERNAME} \
   && echo "ALL ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} \
   && chsh --shell /bin/fish ${USERNAME}
